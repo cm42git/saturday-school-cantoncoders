@@ -14,55 +14,55 @@ public class PalindromePermutationTest {
     }
     
     @Test
-    @Disabled
+    // @Disabled
     public void singleWordNotPalindrome() {
         assertThat(isPalindromePermutation("taco")).isFalse();
     }
 
     @Test
-    @Disabled
+    // @Disabled
     public void singleWordPalindromePermutation() {
         assertThat(isPalindromePermutation("nana")).isTrue();
     }
 
     @Test
-    @Disabled
+    // @Disabled
     public void singleWordPalindromePermutationWithOddNumberOfCharacters() {
         assertThat(isPalindromePermutation("nanan")).isTrue();
     }
 
     @Test
-    @Disabled
+    // @Disabled
     public void singleWordWithTwoOddNumberOfCharacters() {
         assertThat(isPalindromePermutation("nanant")).isFalse();
     }
 
     @Test
-    @Disabled
+    // @Disabled
     public void ignoresCase() {
         assertThat(isPalindromePermutation("Racecar")).isTrue();
     }
 
     @Test
-    @Disabled
+    // @Disabled
     public void ignoresSpaces() {
         assertThat(isPalindromePermutation("race car")).isTrue();
     }
 
     @Test
-    @Disabled
+    // @Disabled
     public void ignoresPunctuation() {
         assertThat(isPalindromePermutation("race car!")).isTrue();
     }
 
     @Test
-    @Disabled
+    // @Disabled
     public void ignoresNumbers() {
         assertThat(isPalindromePermutation("race car1")).isTrue();
     }
 
     @Test
-    @Disabled
+    // @Disabled
     public void twoWordPalindromePermutation() {
         assertThat(isPalindromePermutation("#Race & #Care")).isTrue();
     }

@@ -19,41 +19,41 @@ public class PermutationTest {
     }
 
     @Test
-    @Disabled
+    // @Disabled
     public void permutationIsCaseSensitive() {
         assertThat(isPermutation("dog", "Dog")).isFalse();
     }
 
     @Test
-    @Disabled
+    // @Disabled
     public void permutationsAreEqualInLength() {
         assertThat(isPermutation("game", "games")).isFalse();
         assertThat(isPermutation("games", "game")).isFalse();
     }
 
     @Test
-    @Disabled
+    // @Disabled
     public void sameSizedStringsAreNotPermutations() {
         assertThat(isPermutation("mace", "mage")).isFalse();
         assertThat(isPermutation("mage", "mace")).isFalse();
     }
 
     @Test
-    @Disabled
+    // @Disabled
     public void permutationOfUnequalStrings() {
         assertThat(isPermutation("game", "mage")).isTrue();
         assertThat(isPermutation("mage", "game")).isTrue();
     }
 
     @Test
-    @Disabled
+    // @Disabled
     public void duplicateLettersThatAreNotPermutations() {
         assertThat(isPermutation("magge", "gaame")).isFalse();
         assertThat(isPermutation("gaame", "magge")).isFalse();
     }
 
     @Test
-    @Disabled
+    // @Disabled
     public void spacesWithUnequalNumberOfSpaces() {
         assertThat(isPermutation("ga  me", "mage ")).isFalse();
         assertThat(isPermutation("mage ", "ga  me")).isFalse();

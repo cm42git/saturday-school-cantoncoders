@@ -13,5 +13,39 @@ public class CompressionTest {
         assertThat(compress("")).isEqualTo("");
     }
 
+    @Test
+    public void compressedStringOfEqualLengthIsNotReturned() {
+        assertThat(compress("aa")).isEqualTo("aa");
+    }
+
+    @Test
+
+    public void compressSingleCharacter() {
+        assertThat(compress("aaa")).isEqualTo("a3");
+    }
+
+    @Test
+
+    public void compressedStringIsEqualLengthToTheOriginal() {
+        assertThat(compress("aabb")).isEqualTo("aabb");
+    }
+
+    @Test
+
+    public void compressTwoSetsOfLetters() {
+        assertThat(compress("aaabb")).isEqualTo("a3b2");
+    }
+
+    @Test
+
+    public void compressLongString() {
+        assertThat(compress("aaabcccccaaa")).isEqualTo("a3b1c5a3");
+    }
+
+    @Test
+
+    public void compressLongString2() {
+        assertThat(compress("aaabcccccaaad")).isEqualTo("a3b1c5a3d1");
+    }
 
 }

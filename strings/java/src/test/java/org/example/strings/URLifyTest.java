@@ -15,13 +15,13 @@ public class URLifyTest {
     }
 
     @Test
-    @Disabled
+    // @Disabled
     public void containsSingleSpace() {
         testReplaceSpaces("Canton Coders", "Canton%20Coders");
     }
 
     @Test
-    @Disabled
+    // @Disabled
     public void containsMultipleSpaces() {
         testReplaceSpaces("Coding with Canton Coders", "Coding%20with%20Canton%20Coders");
     }

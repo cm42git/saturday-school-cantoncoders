@@ -8,7 +8,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class RotateMatrixTest {
 
     @Test
-    @Disabled
+    // @Disabled
     public void test() {
         //  a, b
         //  c, d
