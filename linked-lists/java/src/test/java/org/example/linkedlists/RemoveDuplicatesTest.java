@@ -52,11 +52,11 @@ public class RemoveDuplicatesTest {
     /* EXTRA CREDIT */
     /* Refactor the method to take a LinkedListNode with an element that extends Object */
     @Test
-    @Disabled
+    // @Disabled
     public void makeTheMethodGeneric() {
-//        var node = LinkedListNode.buildLinkedList("Cat", "Dog", "dog", "Cat", "Dog", "Bear", "Bird");
-//        RemoveDups.remove(node);
-//        validateWithRange(node, "Cat", "Dog", "dog", "Bear", "Bird");
+       var node = LinkedListNode.buildLinkedList("Cat", "Dog", "dog", "Cat", "Dog", "Bear", "Bird");
+       RemoveDuplicates.remove(node);
+       validateWithRange(node, "Cat", "Dog", "dog", "Bear", "Bird");
     }
 
 
