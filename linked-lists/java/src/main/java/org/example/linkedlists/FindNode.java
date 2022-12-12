@@ -34,5 +34,18 @@ public class FindNode {
 
         return n;
         // }
+        /* var tail = node;
+        var head = node;
+
+        for (int i = nth; i > 0; i--) {
+            tail = tail.getNext();
+        }
+
+        while (tail.hasNext()) {
+            tail = tail.getNext();
+            head = head.getNext();
+        }
+
+        return head; */
     }
 }

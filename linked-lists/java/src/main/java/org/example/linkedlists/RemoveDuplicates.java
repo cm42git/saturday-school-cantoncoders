@@ -6,10 +6,6 @@ public class RemoveDuplicates {
 
     public static <T> void remove(LinkedListNode<T> node) {
         var seen = new HashSet<>();
-        if (node.hasNext()) {
-            seen.add(node.getElement());
-            node = node.getNext();
-        }
         while (node.hasNext()) {
             if (seen.contains(node.getElement())) {
                 node.getPrevious().setNext(node.getNext());
