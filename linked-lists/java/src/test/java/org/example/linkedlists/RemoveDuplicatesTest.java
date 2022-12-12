@@ -1,9 +1,7 @@
 package org.example.linkedlists;
 
-import org.junit.jupiter.api.Disabled;
+// import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
-
-import java.util.ArrayList;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.example.linkedlists.LinkedListAssert.validateWithRange;
@@ -81,6 +79,5 @@ public class RemoveDuplicatesTest {
         assertThat(node3.getElement()).isEqualTo(3);
 
     }
-
 
 }
