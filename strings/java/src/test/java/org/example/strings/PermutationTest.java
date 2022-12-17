@@ -59,4 +59,18 @@ public class PermutationTest {
         assertThat(isPermutation("mage ", "ga  me")).isFalse();
     }
 
+    @Test
+    // @Disabled
+    public void duplicateLettersThatArePermutations() {
+        assertThat(isPermutation("maage", "gaame")).isTrue();
+        assertThat(isPermutation("ggame", "magge")).isTrue();
+    }
+
+    @Test
+    // @Disabled
+    public void duplicateMultiLettersThatArePermutations() {
+        assertThat(isPermutation("magaaee", "gaaamee")).isTrue();
+        assertThat(isPermutation("ggamge", "mgagge")).isTrue();
+    }
+
 }

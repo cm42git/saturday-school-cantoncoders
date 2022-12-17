@@ -19,6 +19,7 @@ public class URLifyTest {
     public void containsSingleSpace() {
         testReplaceSpaces("Canton Coders", "Canton%20Coders");
     }
+    // Canton   Coders
 
     @Test
     // @Disabled

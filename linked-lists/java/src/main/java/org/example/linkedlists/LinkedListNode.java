@@ -1,8 +1,6 @@
 package org.example.linkedlists;
 
-import java.util.Arrays;
-
-public class LinkedListNode<T> {
+public class LinkedListNode<T extends Comparable<T>> implements Comparable<T> {
     private final T element;
     private LinkedListNode<T> next;
     private LinkedListNode<T> previous;
@@ -12,7 +10,7 @@ public class LinkedListNode<T> {
         this.element = element;
     }
 
-    public static <E> LinkedListNode<E> buildLinkedList(E ...elements) {
+    public static <E extends Comparable<E>> LinkedListNode<E> buildLinkedList(E... elements) {
         var firstNode = new LinkedListNode<E>(elements[0]);
 
         var node = firstNode;
@@ -23,7 +21,7 @@ public class LinkedListNode<T> {
                 first = false;
                 continue;
             }
-            node.setNext(new LinkedListNode<>(e));
+            node.setNext(new LinkedListNode<E>(e));
             node.getNext().setPrevious(node);
             node = node.getNext();
             s++;
@@ -59,5 +57,14 @@ public class LinkedListNode<T> {
 
     public int getSize() {
         return this.size;
+    }
+
+    // public int compareTo(T o) {
+    //     return getElement().compareTo(o);
+    // }
+
+    @Override
+    public int compareTo(T o) {
+        return getElement().compareTo(o);
     }
 }

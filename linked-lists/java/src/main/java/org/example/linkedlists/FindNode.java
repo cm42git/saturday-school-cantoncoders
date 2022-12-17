@@ -20,6 +20,9 @@ public class FindNode {
         // } else if (nth == 1 && !(head.getNext().hasNext())) {
         // return head;
         // } else {
+        if (nth >= head.getSize()) {
+            return null;
+        }
         LinkedListNode<Integer> n = head;
         int size = 1;
         while (n.hasNext()) {
