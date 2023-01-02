@@ -1,6 +1,6 @@
 package org.example.linkedlists;
 
-public class LinkedListNode<T extends Comparable<T>> implements Comparable<T> {
+public class LinkedListNode<T> implements Node<T> {
     private final T element;
     private LinkedListNode<T> next;
     private LinkedListNode<T> previous;
@@ -10,8 +10,9 @@ public class LinkedListNode<T extends Comparable<T>> implements Comparable<T> {
         this.element = element;
     }
 
-    public static <E extends Comparable<E>> LinkedListNode<E> buildLinkedList(E... elements) {
-        var firstNode = new LinkedListNode<E>(elements[0]);
+    @SafeVarargs
+    public static <E> LinkedListNode<E> buildLinkedList(E... elements) {
+        var firstNode = new LinkedListNode<>(elements[0]);
 
         var node = firstNode;
         boolean first = true;
@@ -63,8 +64,8 @@ public class LinkedListNode<T extends Comparable<T>> implements Comparable<T> {
     //     return getElement().compareTo(o);
     // }
 
-    @Override
-    public int compareTo(T o) {
-        return getElement().compareTo(o);
-    }
+    // @Override
+    // public int compareTo(T o) {
+    //     return getElement().compareTo(o);
+    // }
 }
