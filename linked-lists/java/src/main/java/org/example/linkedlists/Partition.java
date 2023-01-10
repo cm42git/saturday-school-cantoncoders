@@ -9,7 +9,7 @@ public class Partition {
     if (node.getSize() <= 1)
       return node;
 
-    while (linkedListPartitioned.hasNext()) {
+    while (linkedListPartitioned.getNext() != null) {
       if (linkedListPartitioned.getElement().compareTo(value) < 0) {
         // move insertion point to element greater than or equal to value
         if (linkedListPartitioned == insertGTE) {
@@ -23,7 +23,7 @@ public class Partition {
     }
 
     if (linkedListPartitioned.getElement().compareTo(value) < 0)
-      moveNode(insertGTE, linkedListPartitioned);
+    moveNode(insertGTE, linkedListPartitioned);
 
     while (linkedListPartitioned.getPrevious() != null) {
       linkedListPartitioned = linkedListPartitioned.getPrevious();
