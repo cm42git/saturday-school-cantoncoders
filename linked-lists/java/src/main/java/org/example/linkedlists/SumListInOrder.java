@@ -1,4 +1,5 @@
 package org.example.linkedlists;
+import java.util.Arrays;
 
 public class SumListInOrder {
     static SinglyLinkedNode<Integer> outList = null;
