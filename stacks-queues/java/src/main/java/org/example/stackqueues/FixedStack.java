@@ -49,7 +49,7 @@ public class FixedStack {
     }
 
     public int search(Object object) {
-        for (int i = 0; i < data.length; i++) {
+        for (int i = 0; i <= lastInIndex; i++) {
             if (object.equals(data[i]))
                 return data.length - i;
         }
